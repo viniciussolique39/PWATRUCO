@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    width: 100%;
+    color: #fff;
+    padding: 10px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#team1, #team2 {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+#scoreboard {
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+}
+

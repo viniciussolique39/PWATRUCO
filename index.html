@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Truco</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="white" />
+    <link rel="apple-touch-icon" href="image/pwa-icon-256.png" />
+</head>
+<body>
+    <header>
+        <h1>Pontuador de Truco</h1>
+    </header>
+    <main>
+        <section id="teams">
+            <div id="team1">
+                <h2>Equipe 1</h2>
+                <p>Pontos: <span id="team1Points">0</span></p>
+            </div>
+            <div id="team2">
+                <h2>Equipe 2</h2>
+                <p>Pontos: <span id="team2Points">0</span></p>
+            </div>
+        </section>
+        <section id="scoreboard">
+            <h2>Placar do Jogo</h2>
+            <p>Equipe 1: <span id="team1Wins">0</span> vitórias</p>
+            <p>Equipe 2: <span id="team2Wins">0</span> vitórias</p>
+        </section>
+        <section id="controls">
+            <button id="team1ScoreButton">Pontuar Equipe 1</button>
+            <button id="team2ScoreButton">Pontuar Equipe 2</button>
+            <button id="resetButton">Recomeçar</button>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
