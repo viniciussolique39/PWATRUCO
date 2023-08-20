@@ -6,56 +6,34 @@ window.onload = () => {
     }
 };
 
-const team1PointsElement = document.getElementById('team1Points');
-const team2PointsElement = document.getElementById('team2Points');
-const team1WinsElement = document.getElementById('team1Wins');
-const team2WinsElement = document.getElementById('team2Wins');
-const team1ScoreButton = document.getElementById('team1ScoreButton');
-const team2ScoreButton = document.getElementById('team2ScoreButton');
-const resetButton = document.getElementById('resetButton');
+// Variável para armazenar a pontuação atual
+let currentScore = 0;
 
+// Selecionar os elementos do DOM
+const scoreElement = document.getElementById('score');
+const onePointButton = document.getElementById('onePoint');
+const threePointsButton = document.getElementById('threePoints');
+const sixPointsButton = document.getElementById('sixPoints');
+const twelvePointsButton = document.getElementById('twelvePoints');
+const resetButton = document.getElementById('reset');
 
-let team1Points = 0;
-let team2Points = 0;
-let team1Wins = 0;
-let team2Wins = 0;
-
-team1ScoreButton.addEventListener('click', () => {
-    team1Points += 1;
-    updatePoints();
-});
-
-team2ScoreButton.addEventListener('click', () => {
-    team2Points += 1;
-    updatePoints();
-});
-
-resetButton.addEventListener('click', () => {
-    team1Points = 0;
-    team2Points = 0;
-    updatePoints();
-});
-
-function updatePoints() {
-    team1PointsElement.textContent = team1Points;
-    team2PointsElement.textContent = team2Points;
-
-    if (team1Points === 12) {
-        team1Wins++;
-        team1WinsElement.textContent = team1Wins;
-        resetGame();
-    } else if (team2Points === 12) {
-        team2Wins++;
-        team2WinsElement.textContent = team2Wins;
-        resetGame();
-    }
+// Funções para atualizar a pontuação
+function addPoints(points) {
+    currentScore += points;
+    scoreElement.textContent = currentScore;
 }
 
-function resetGame() {
-    team1Points = 0;
-    team2Points = 0;
-    team1PointsElement.textContent = 0;
-    team2PointsElement.textContent = 0;
+function resetScore() {
+    currentScore = 0;
+    scoreElement.textContent = currentScore;
 }
+
+// Adicionar event listeners aos botões
+onePointButton.addEventListener('click', () => addPoints(1));
+threePointsButton.addEventListener('click', () => addPoints(3));
+sixPointsButton.addEventListener('click', () => addPoints(6));
+twelvePointsButton.addEventListener('click', () => addPoints(12));
+resetButton.addEventListener('click', resetScore);
+
 
   
