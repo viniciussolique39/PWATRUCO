@@ -6,20 +6,19 @@ window.onload = () => {
     }
 };
 
-// Variável para armazenar a pontuação atual
+
 let currentScore = 0;
 
-// Selecionar os elementos do DOM
 const scoreElement = document.getElementById('score');
-const onePointButton = document.getElementById('onePoint');
-const threePointsButton = document.getElementById('threePoints');
-const sixPointsButton = document.getElementById('sixPoints');
-const twelvePointsButton = document.getElementById('twelvePoints');
+const umPontoButton = document.getElementById('umPonto');
+const tresPontosButton = document.getElementById('tresPontos');
+const seisPontosButton = document.getElementById('seisPontos');
+const dozePontosButton = document.getElementById('dozePontos');
 const resetButton = document.getElementById('reset');
 
-// Funções para atualizar a pontuação
-function addPoints(points) {
-    currentScore += points;
+
+function adicionarPontos(pontos) {
+    currentScore += pontos;
     scoreElement.textContent = currentScore;
 }
 
@@ -28,11 +27,10 @@ function resetScore() {
     scoreElement.textContent = currentScore;
 }
 
-// Adicionar event listeners aos botões
-onePointButton.addEventListener('click', () => addPoints(1));
-threePointsButton.addEventListener('click', () => addPoints(3));
-sixPointsButton.addEventListener('click', () => addPoints(6));
-twelvePointsButton.addEventListener('click', () => addPoints(12));
+umPontoButton.addEventListener('click', () => adicionarPontos(1));
+tresPontosButton.addEventListener('click', () => adicionarPontos(3));
+seisPontosButton.addEventListener('click', () => adicionarPontos(6));
+dozePontosButton.addEventListener('click', () => adicionarPontos(12));
 resetButton.addEventListener('click', resetScore);
 
 
